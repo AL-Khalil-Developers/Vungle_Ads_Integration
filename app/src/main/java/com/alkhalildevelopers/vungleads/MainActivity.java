@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 vungleBanner.destroyAd();
+                bannerAdContainer.removeAllViews();
             }
         });
 
@@ -128,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        bannerAdContainer.removeAllViews();
         vungleBanner.destroyAd();
         super.onDestroy();
     }
